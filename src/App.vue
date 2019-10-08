@@ -18,7 +18,7 @@
       <v-container>
         <v-layout text-center wrap>
           <v-flex xs12>
-            <v-btn @click="onClick">start</v-btn>
+            <v-btn @click="onClick">Start</v-btn>
           </v-flex>
           <v-flex xs12>
             <p v-for="(result, index) in state.results" :key="index">
@@ -34,16 +34,12 @@
 <script lang="ts">
 import { createComponent, reactive, computed } from "@vue/composition-api";
 
-import HelloWorld from "./components/HelloWorld.vue";
 import {
   SpeechRecognizer,
   RecognizeResult
 } from "@/services/speech-recognizer";
 
 export default createComponent({
-  components: {
-    HelloWorld
-  },
   setup() {
     const speechRecognizer = new SpeechRecognizer({
       language: "ja"
