@@ -24,3 +24,5 @@ jobs:
         yarn deploy:ci
       env:
         CI: true
+        FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
+
