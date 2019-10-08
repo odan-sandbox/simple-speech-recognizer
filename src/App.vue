@@ -2,8 +2,7 @@
   <v-app>
     <v-app-bar app>
       <v-toolbar-title class="headline text-uppercase">
-        <span>Vuetify</span>
-        <span class="font-weight-light">MATERIAL DESIGN</span>
+        <span class="font-weight-light">Simple Speech Recognizer</span>
       </v-toolbar-title>
       <v-spacer></v-spacer>
       <v-btn
@@ -22,16 +21,14 @@
 </template>
 
 <script lang="ts">
-import Vue from "vue";
+import { createComponent } from "@vue/composition-api";
+
 import HelloWorld from "./components/HelloWorld.vue";
 
-export default Vue.extend({
-  name: "App",
+export default createComponent({
   components: {
     HelloWorld
   },
-  data: () => ({
-    //
-  })
+  setup() {}
 });
 </script>
