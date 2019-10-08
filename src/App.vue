@@ -50,7 +50,6 @@ export default createComponent({
     });
     function onClick() {
       speechRecognizer.start();
-      console.log("poyo");
     }
 
     type State = { results: RecognizeResult[] };
@@ -63,7 +62,6 @@ export default createComponent({
     );
 
     speechRecognizer.onRecognize(results => {
-      console.log(results);
       state.results = results;
     });
 
